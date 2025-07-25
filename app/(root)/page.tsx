@@ -10,13 +10,19 @@ const page = () => {
   return (
     <div>
       <Header />
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 max-md:px-2">
         <Hero />
-        <ShapingTheFuture />
-        <ExperienceTheUAAC />
-        <BePartOfAsia />
-        <Footer />
+        <div className="max-md:mt-10 md:mt-15">
+          <ShapingTheFuture />
+        </div>
+        <div className="max-md:mt-10 md:mt-15">
+          <ExperienceTheUAAC />
+        </div>
+        <div className="max-md:mt-10 md:mt-15">
+          <BePartOfAsia />
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

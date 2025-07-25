@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-10 pb-0">
+    <footer className="bg-white pt-10 pb-0 border-t border-[#E5E5E5]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-wrap gap-10 justify-between">
           {/* Logo and Committee Info */}
