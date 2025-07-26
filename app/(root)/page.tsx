@@ -10,6 +10,23 @@ const page = () => {
   return (
     <div>
       <Header />
+      <div className="relative w-full ">
+        <div className="absolute top-0 left-0">
+          <img
+            src="/root/left-background.svg"
+            className="max-md:w-35 md:w-35 lg-100 xl:w-[100%]"
+            alt="left"
+          />
+        </div>
+        <div className="absolute top-0 right-0">
+          <img
+            src="/root/right-background.svg"
+            className="max-md:w-35 md:w-35 lg-100 xl:w-[100%]"
+            alt="right"
+          />
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 max-md:px-2">
         <Hero />
         <div className="max-md:mt-10 md:mt-15">

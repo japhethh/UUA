@@ -4,9 +4,7 @@ const BePartOfAsia = () => {
   return (
     <div className="mt-15">
       <div className="w-full relative h-100 bg-[#FAFAFA] rounded-3xl p-10 flex">
-        <div className="absolute right-0 top-0 ">
-            <img src="/root/bepart-image.svg" className="w-130" alt="image" />
-        </div>
+      
         <div className="flex h-full w-full justify-start items-end">
           <div className="flex flex-col gap-4 max-w-2xl">
             <h1 className="leading-tight font-semibold text-3xl">
@@ -21,6 +19,10 @@ const BePartOfAsia = () => {
               Play Now
             </button>
           </div>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <img src="/root/home-patient.svg" alt="Image" />
         </div>
       </div>
     </div>

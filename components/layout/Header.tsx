@@ -18,7 +18,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const pathname = usePathname();
   return (
-    <div className="border-b border-gray-100 bg-white sticky top-0 z-50">
+    <div className="border-b border-gray-100 bg-white sticky top-0 z-50 ">
       <div className="py-5 px-8 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center">
           <img src="/logo.svg" alt="logo" className="h-8 w-auto" />

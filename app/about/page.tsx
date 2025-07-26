@@ -9,7 +9,13 @@ const page = () => {
   return (
     <div>
       <Header />
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="relative w-full ">
+      
+        <div className="absolute top-0 right-0 z-0  ">
+          <img src="/about/right-background.svg" className="w-60" alt="right" />
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 z-30 relative">
         <Banner />
         <TwoImages />
         <InPartnershipWith />

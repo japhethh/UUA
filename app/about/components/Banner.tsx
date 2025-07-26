@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="mt-20 max-md:mt-8 px-0 max-md:px-2">
+    <div className="mt-20 max-md:mt-8 px-0 max-md:px-2 z-30">
       <div className="flex max-md:flex-col gap-8 max-md:gap-6">
         <div className="w-md max-md:w-full">
           <div className="flex flex-col gap-3 max-md:gap-2 items-start">

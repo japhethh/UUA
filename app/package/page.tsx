@@ -8,6 +8,11 @@ const page = () => {
   return (
     <div>
       <Header />
+      <div className="relative w-full ">
+        <div className="absolute top-0 left-0">
+          <img src="/package/left-background.svg" className="max-md:w-35 md:w-35 lg-100 xl:w-[100%]" alt="left" />
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <Package />
         <BePartOfAsia />
