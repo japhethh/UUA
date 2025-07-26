@@ -101,7 +101,9 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="rounded-[2.5rem] max-md:rounded-2xl bg-gray-100 h-96 max-md:h-48 w-full mt-4"></div>
+        <div className="rounded-[2.5rem] max-md:rounded-2xl w-full mt-4">
+          <img src="/root/root-image.svg" alt="root" />
+        </div>
       </div>
     </div>
   );
