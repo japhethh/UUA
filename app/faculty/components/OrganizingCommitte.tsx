@@ -28,7 +28,7 @@ const OrganizingCommittee = () => {
     <section className="py-12 px-2">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-2">
-          Organizing Committee
+          Organizing Committee  
         </h2>
         <p className="text-center text-zinc-500 text-base mb-8 max-w-2xl mx-auto">
           The minds behind UAA 2026 — curating content, shaping sessions, and
@@ -41,14 +41,14 @@ const OrganizingCommittee = () => {
                 <img
                   src={speaker.image}
                   alt={speaker.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="mt-4 text-start w-full">
-                <h3 className="font-semibold text-md max-md:text-sm md:text-lg text-[#222]">
+                <h3 className="font-semibold text-md max-md:text-sm md:text-lg text-[#222] leading-snug line-clamp-2 min-h-[2.7em]">
                   {speaker.name}
                 </h3>
-                <p className="text-zinc-500 text-xs max-md:text-[10px] md:text-sm mt-1">
+                <p className="text-zinc-500 text-xs max-md:text-[10px] md:text-sm mt-1 leading-snug line-clamp-2 min-h-[2.7em]">
                   {speaker.title}
                 </p>
               </div>

@@ -118,7 +118,7 @@ const ScientificProgram = () => {
                   className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-0 border-b border-[#E5E5E5] last:border-b-0 px-4 max-md:px-2 py-6 max-md:py-4"
                 >
                   <div className="flex items-center gap-2 w-full md:w-1/5">
-                    <img src="/program/time-icon.svg" alt="Time" className="w-4 max-md:w-3 h-auto" />
+                    <img src="/program/time-icon.svg" alt="Time" className="w-10 max-md:w-3 h-auto" />
                     <span className="text-xs max-md:text-[10px] md:text-sm text-zinc-600 font-medium whitespace-nowrap">
                       {session.time}
                     </span>
@@ -132,7 +132,7 @@ const ScientificProgram = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-2 w-full md:w-1/7 md:justify-start mt-2 md:mt-0">
-                    <img src="/program/location-icon.svg" alt="Location" className="w-4 max-md:w-3 h-auto" />
+                    <img src="/program/location-icon.svg" alt="Location" className="w-10 max-md:w-3 h-auto" />
                     <span className="text-xs max-md:text-[10px] md:text-sm text-zinc-600 font-medium whitespace-nowrap">
                       {session.location}
                     </span>

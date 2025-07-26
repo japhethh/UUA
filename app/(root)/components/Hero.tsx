@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -7,21 +8,33 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center gap-4 mt-30 max-md:mt-8 max-md:gap-3 w-full">
           <h1 className="rounded-full py-2 px-5 border border-zinc-100 text-[#4B4B4B] bg-white w-fit flex flex-row gap-2 text-base max-md:text-sm">
             <span>
-              <img src="/root/flag.svg" alt="Flag" className="w-5 h-5 max-md:w-4 max-md:h-4" />
+              <img
+                src="/root/flag.svg"
+                alt="Flag"
+                className="w-5 h-5 max-md:w-4 max-md:h-4"
+              />
             </span>
             <span>Philippines</span>
           </h1>
           <div className="max-md:w-full max-md:flex max-md:justify-center">
-            <img src="/root/hero-title-text.svg" alt="Hero" className="max-md:w-full" />
+            <img
+              src="/root/hero-title-text.svg"
+              alt="Hero"
+              className="max-md:w-full"
+            />
           </div>
           <h1 className="text-center text-lg md:text-xl font-normal max-w-2xl max-md:text-base max-md:max-w-xs">
-            Join Asia’s leading urology experts, innovators, and researchers as we shape the future of urological care from Taiwan 2025 to the Philippines in 2026.
+            Join Asia’s leading urology experts, innovators, and researchers as
+            we shape the future of urological care from Taiwan 2025 to the
+            Philippines in 2026.
           </h1>
 
           <div className="flex justify-center items-center gap-4 max-md:gap-2 max-md:flex-col w-full">
-            <button className="rounded-full py-2 px-5 max-md:py-1 max-md:px-4 bg-[#0971B3] text-white text-base max-md:text-sm w-fit">
-              Register Now
-            </button>
+            <Link href={"/register"}>
+              <button className="rounded-full cursor-pointer py-2 px-5 max-md:py-1 max-md:px-4 bg-[#0971B3] text-white text-base max-md:text-sm w-fit">
+                Register Now
+              </button>
+            </Link>
             <button className="rounded-full py-2 px-5 max-md:py-1 max-md:px-4 bg-[#D92D40] text-white text-base max-md:text-sm w-fit">
               Learn More.
             </button>
@@ -38,10 +51,15 @@ const Hero = () => {
               </h1>
             </div>
             <h1 className="text-3xl max-md:text-xl font-semibold mt-4 text-[#1E1E1E]">
-              Advancing<br />Urology Across Asia
+              Advancing
+              <br />
+              Urology Across Asia
             </h1>
             <p className="text-zinc-600 text-xs max-md:text-sm mt-4">
-              The UAAC is a premier annual event that gathers top-tier urologists, researchers, and medical innovators from across Asia. It serves as a platform to exchange insights, explore emerging technologies, and elevate standards in urological care.
+              The UAAC is a premier annual event that gathers top-tier
+              urologists, researchers, and medical innovators from across Asia.
+              It serves as a platform to exchange insights, explore emerging
+              technologies, and elevate standards in urological care.
             </p>
           </div>
           {/* Card 2 */}
@@ -52,10 +70,15 @@ const Hero = () => {
               </h1>
             </div>
             <h1 className="text-3xl max-md:text-xl font-semibold mt-4 text-[#1E1E1E]">
-              Two Years of<br />Innovation and Impact
+              Two Years of
+              <br />
+              Innovation and Impact
             </h1>
             <p className="text-zinc-600 text-xs max-md:text-sm mt-4">
-              The 22nd UAAC will be hosted in Taiwan this August 2025, promising world-class discussions and breakthroughs. The journey continues in 2026 as the Philippines proudly hosts the 23rd UAAC, further expanding the congress’ regional impact.
+              The 22nd UAAC will be hosted in Taiwan this August 2025, promising
+              world-class discussions and breakthroughs. The journey continues
+              in 2026 as the Philippines proudly hosts the 23rd UAAC, further
+              expanding the congress’ regional impact.
             </p>
           </div>
           {/* Card 3 */}
@@ -66,16 +89,19 @@ const Hero = () => {
               </h1>
             </div>
             <h1 className="text-3xl max-md:text-xl font-semibold mt-4 text-[#1E1E1E]">
-              Learn.<br />Collaborate. Lead.
+              Learn.
+              <br />
+              Collaborate. Lead.
             </h1>
             <p className="text-zinc-600 text-xs max-md:text-sm mt-4">
-              Whether you’re an established professional or an emerging voice in the field, UAAC welcomes you to connect, contribute, and grow. Discover new perspectives, build lasting partnerships, and help shape the future of urology in Asia.
+              Whether you’re an established professional or an emerging voice in
+              the field, UAAC welcomes you to connect, contribute, and grow.
+              Discover new perspectives, build lasting partnerships, and help
+              shape the future of urology in Asia.
             </p>
           </div>
         </div>
-        <div className="rounded-[2.5rem] max-md:rounded-2xl bg-gray-100 h-96 max-md:h-48 w-full mt-4">
-
-        </div>
+        <div className="rounded-[2.5rem] max-md:rounded-2xl bg-gray-100 h-96 max-md:h-48 w-full mt-4"></div>
       </div>
     </div>
   );

@@ -29,10 +29,10 @@ const Speakers = () => {
           Global leaders in urology share insights, breakthroughs, and visions
           for the future of urologic healthcare in Asia and beyond.
         </p>
-        <div className="grid grid-cols-1 max-md:grid-cols-1 md:grid-cols-3 gap-2 max-md:gap-6">
+        <div className="grid grid-cols-1 max-md:grid-cols-1 md:grid-cols-3 gap-6 max-md:gap-6">
           {speakers.map((speaker, idx) => (
             <div key={speaker.name} className="flex flex-col items-center w-full">
-              <div className="relative w-64 h-72 max-md:w-full max-md:h-56 md:w-72 md:h-80 rounded-3xl max-md:rounded-xl">
+              <div className="relative  max-md:w-full max-md:h-56 rounded-3xl max-md:rounded-xl">
                 <img
                   src={speaker.image}
                   alt={speaker.name}

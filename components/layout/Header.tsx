@@ -44,9 +44,11 @@ const Header = () => {
         </ul>
         {/* Desktop Button */}
         <div className="max-md:hidden">
-          <button className="w-full py-3 px-6 bg-[#D92D40] text-white rounded-full">
-            Register Now
-          </button>
+          <Link href="/register">
+            <button className="w-full py-3 px-6 bg-[#D92D40] text-white rounded-full cursor-pointer">
+              Register Now
+            </button>
+          </Link>
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -91,9 +93,11 @@ const Header = () => {
               );
             })}
           </ul>
+          <Link href="/register">
           <button className="mt-4 w-full py-3 px-6 bg-[#D92D40] text-white rounded-full">
             Register Now
           </button>
+          </Link>
         </div>
       )}
     </div>
