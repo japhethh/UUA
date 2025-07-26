@@ -10,7 +10,7 @@ const ShapingTheFuture = () => {
     },
     {
       image: "/root/shaping-02.svg",
-      title: "Abstract\nSubmission Deadline",
+      title: "Abstract Submission\nDeadline",
       date: "April 30, 2025",
       buttonText: "Learn More.",
     },
@@ -61,8 +61,8 @@ const ShapingTheFuture = () => {
           <div key={index} className="relative flex justify-center items-center w-full">
             <div className="relative rounded-2xl max-md:rounded-xl w-full">
               <img src={item.image} alt={item.title} className="w-full h-auto object-cover" />
-              <div className="absolute bottom-0 left-0 w-full p-5 max-md:p-3 flex justify-center">
-                <div className="backdrop-blur-[5px] border border-[#4B453C] rounded-xl max-md:rounded-lg p-4 max-md:p-2 w-full text-start">
+              <div className="absolute bottom-0 left-0 w-full p-3 max-md:p-3 flex justify-center">
+                <div className="backdrop-blur-[8px] border border-zinc-700 rounded-xl max-md:rounded-lg p-4 max-md:p-2 w-full text-start">
                   <h1 className="text-white text-2xl max-md:text-lg font-semibold leading-tight mb-2">
                     {item.title.split('\n').map((line, i) => (
                       <React.Fragment key={i}>

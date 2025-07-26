@@ -3,23 +3,23 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="bg-white pt-10 pb-0 border-t border-[#E5E5E5]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-wrap gap-10 justify-between">
+      <div className="max-w-7xl mx-auto px-6 max-md:px-2">
+        <div className="flex flex-wrap gap-10 max-md:gap-6 justify-between max-md:flex-col">
           {/* Logo and Committee Info */}
-          <div className="min-w-[260px] flex flex-col gap-4">
-            <img src="/logo.svg" alt="UAAC Logo" className="w-40 mb-2" />
-            <h2 className="font-semibold text-black text-base mb-1">UAAC 2025 Organizing Committee</h2>
-            <div className="flex flex-col gap-2 text-zinc-700 text-sm">
-              <div className="flex items-center gap-2"><span className="inline-block w-6 h-6 bg-zinc-200 rounded-full flex items-center justify-center"><img src="/root/location-icon.svg" alt="" /></span> Taiwan (Event Location)</div>
-              <div className="flex items-center gap-2"><span className="inline-block w-6 h-6 bg-zinc-200 rounded-full flex items-center justify-center"><img src="/root/message-icon.svg" alt="" /></span> info@uaac2025.org</div>
-              <div className="flex items-center gap-2"><span className="inline-block w-6 h-6 bg-zinc-200 rounded-full flex items-center justify-center"><img src="/root/call-icon.svg" alt="" /></span> +886 1234 5678</div>
+          <div className="min-w-[200px] max-md:min-w-0 flex flex-col gap-4 max-md:gap-2 mb-4 max-md:mb-6">
+            <img src="/logo.svg" alt="UAAC Logo" className="w-40 max-md:w-28 mb-2 max-md:mb-1" />
+            <h2 className="font-semibold text-black text-base max-md:text-sm mb-1">UAAC 2025 Organizing Committee</h2>
+            <div className="flex flex-col gap-2 text-zinc-700 text-sm max-md:text-xs">
+              <div className="flex items-center gap-2"><span className="inline-block w-6 h-6 max-md:w-5 max-md:h-5 bg-zinc-200 rounded-full flex items-center justify-center"><img src="/root/location-icon.svg" alt="" /></span> Taiwan (Event Location)</div>
+              <div className="flex items-center gap-2"><span className="inline-block w-6 h-6 max-md:w-5 max-md:h-5 bg-zinc-200 rounded-full flex items-center justify-center"><img src="/root/message-icon.svg" alt="" /></span> info@uaac2025.org</div>
+              <div className="flex items-center gap-2"><span className="inline-block w-6 h-6 max-md:w-5 max-md:h-5 bg-zinc-200 rounded-full flex items-center justify-center"><img src="/root/call-icon.svg" alt="" /></span> +886 1234 5678</div>
             </div>
           </div>
           {/* Links Columns */}
-          <div className="grid grid-cols-4 gap-10 flex-1">
+          <div className="grid grid-cols-4 max-md:grid-cols-2 gap-10 max-md:gap-6 flex-1 w-full">
             <div>
-              <h3 className="font-semibold mb-2">Quick links</h3>
-              <ul className="space-y-3 text-zinc-700 text-sm">
+              <h3 className="font-semibold mb-2 max-md:text-sm">Quick links</h3>
+              <ul className="space-y-3 max-md:space-y-2 text-zinc-700 text-sm max-md:text-xs">
                 <li>Home</li>
                 <li>About</li>
                 <li>Packages</li>
@@ -31,8 +31,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Helpful links</h3>
-              <ul className="space-y-3 text-zinc-700 text-sm">
+              <h3 className="font-semibold mb-2 max-md:text-sm">Helpful links</h3>
+              <ul className="space-y-3 max-md:space-y-2 text-zinc-700 text-sm max-md:text-xs">
                 <li>FAQs</li>
                 <li>Download Brochure</li>
                 <li>Submit Abstract</li>
@@ -44,8 +44,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Media & Updates</h3>
-              <ul className="space-y-3 text-zinc-700 text-sm">
+              <h3 className="font-semibold mb-2 max-md:text-sm">Media & Updates</h3>
+              <ul className="space-y-3 max-md:space-y-2 text-zinc-700 text-sm max-md:text-xs">
                 <li>News & Updates</li>
                 <li>Press & Media Inquiries</li>
                 <li>Media Kit</li>
@@ -57,8 +57,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Legal & Info</h3>
-              <ul className="space-y-3 text-zinc-700 text-sm">
+              <h3 className="font-semibold mb-2 max-md:text-sm">Legal & Info</h3>
+              <ul className="space-y-3 max-md:space-y-2 text-zinc-700 text-sm max-md:text-xs">
                 <li>Privacy Policy</li>
                 <li>Terms & Conditions</li>
                 <li>Code of Conduct</li>
@@ -69,21 +69,21 @@ const Footer = () => {
         </div>
       </div>
       {/* Newsletter Subscription */}
-      <div className="bg-zinc-900/95 py-8 mt-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <h4 className="text-white font-semibold mb-2">Newsletter Subscription</h4>
-          <p className="text-zinc-300 text-sm mb-4">Subscribe to UAA newsletter and stay informed on program updates, inspiring issues, and the latest news.</p>
-          <form className="flex gap-2 max-w-lg">
-            <input type="email" placeholder="Your email address" className="flex-1 rounded-full px-4 py-2 text-sm border border-zinc-300 bg-white text-black" />
-            <button type="submit" className="rounded-full px-6 py-2 bg-[#D92D40] text-white text-sm font-medium">Subscribe</button>
+      <div className="bg-zinc-900/95 py-8 mt-10 max-md:py-6 max-md:mt-8">
+        <div className="max-w-7xl mx-auto px-6 max-md:px-2">
+          <h4 className="text-white font-semibold mb-2 max-md:text-base">Newsletter Subscription</h4>
+          <p className="text-zinc-300 text-sm max-md:text-xs mb-4">Subscribe to UAA newsletter and stay informed on program updates, inspiring issues, and the latest news.</p>
+          <form className="flex gap-2 max-w-lg max-md:flex-col max-md:gap-3">
+            <input type="email" placeholder="Your email address" className="flex-1 rounded-full px-4 py-2 text-sm max-md:text-xs border border-zinc-300 bg-white text-black" />
+            <button type="submit" className="rounded-full px-6 py-2 max-md:px-4 max-md:py-2 bg-[#D92D40] text-white text-sm max-md:text-xs font-medium">Subscribe</button>
           </form>
         </div>
       </div>
       {/* Social Icons & Copyright */}
-      <div className="bg-[#0971B3] py-3">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <span className="text-white text-xs">© 2025 Urological Association of Asia Congress. All rights reserved.</span>
-          <div className="flex gap-4">
+      <div className="bg-[#0971B3] py-3 max-md:py-2">
+        <div className="max-w-7xl mx-auto px-6 max-md:px-2 flex items-center justify-between max-md:flex-col max-md:gap-2">
+          <span className="text-white text-xs max-md:text-[10px] text-center">© 2025 Urological Association of Asia Congress. All rights reserved.</span>
+          <div className="flex gap-4 max-md:justify-center">
             <a href="#" className="text-white"><i className="fab fa-facebook-f" /></a>
             <a href="#" className="text-white"><i className="fab fa-instagram" /></a>
             <a href="#" className="text-white"><i className="fab fa-youtube" /></a>
