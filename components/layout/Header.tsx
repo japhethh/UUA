@@ -1,19 +1,33 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getTranslations, useLocale, Locale } from "@/app/i18n";
 
+const languages = [
+  { code: "en", label: "English" },
+  { code: "es", label: "Español" },
+  { code: "ph", label: "Filipino" },
+  { code: "zh-TW", label: "中文 (繁體)" },
+];
 const Header = () => {
+  const { locale, setLocale } = useLocale();
+  const [t, setT] = useState<any>({});
+
+  useEffect(() => {
+    getTranslations(locale).then(setT);
+  }, [locale]);
+
   const data = [
-    { key: "home", label: "Home" },
-    { key: "about", label: "About" },
-    { key: "package", label: "Packages" },
-    { key: "faculty", label: "Faculty" },
-    { key: "program", label: "Program" },
-    { key: "travels", label: "Travels & Tours" },
-    { key: "tourism", label: "Tourism" },
-    { key: "sponsor", label: "Sponsor" },
-    { key: "contact", label: "Contact Us" },
+    { key: "home" },
+    { key: "about" },
+    // { key: "package" },
+    { key: "faculty" },
+    { key: "program" },
+    { key: "travels" },
+    { key: "tourism" },
+    { key: "sponsor" },
+    { key: "contact" },
   ];
   const [menuOpen, setMenuOpen] = React.useState(false);
   const pathname = usePathname();
@@ -36,12 +50,22 @@ const Header = () => {
                     isActive ? "text-[#CC0101] underline" : ""
                   }`}
                 >
-                  {item.label}
+                  {item.key.charAt(0).toUpperCase() + item.key.slice(1)}
                 </Link>
               </li>
             );
           })}
         </ul>
+        {/* <div>
+          <label htmlFor="lang-select">{t.language || "Language"}: </label>
+          <select
+            id="lang-select"
+            value="en"
+            disabled
+          >
+            <option value="en">English</option>
+          </select>
+        </div> */}
         {/* Desktop Button */}
         <div className="max-md:hidden">
           <Link href="/register">
@@ -72,34 +96,49 @@ const Header = () => {
         </button>
       </div>
       {/* Mobile Nav */}
-      {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-8 pb-4">
-          <ul className="flex flex-col gap-2 mt-2">
-            {data.map((item) => {
-              const link = item.key === "home" ? "/" : `/${item.key}`;
-              const isActive = pathname === link;
-              return (
-                <li key={item.key}>
-                  <Link
-                    href={link}
-                    className={`block py-2 px-2 text-sm text-[#4B4B4B] font-semibold rounded hover:bg-gray-50 transition-colors ${
-                      isActive ? "text-[#CC0101] underline" : ""
-                    }`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <Link href="/register">
-          <button className="mt-4 w-full py-3 px-6 bg-[#D92D40] text-white rounded-full">
+      <div
+        className={`md:hidden bg-white border-t border-gray-100 px-8 pb-4 shadow-xl rounded-b-2xl transition-all duration-300 ease-in-out overflow-hidden ${
+          menuOpen
+            ? "max-h-[500px] opacity-100"
+            : "max-h-0 opacity-0 pointer-events-none"
+        }`}
+        style={{
+          transitionProperty: "max-height, opacity",
+        }}
+      >
+        <ul className="flex flex-col gap-2 mt-2">
+          {data.map((item, idx) => {
+            const link = item.key === "home" ? "/" : `/${item.key}`;
+            const isActive = pathname === link;
+            return (
+              <li
+                key={item.key}
+                className={`transition-all duration-300 ${
+                  menuOpen
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-4 opacity-0"
+                }`}
+                style={{ transitionDelay: menuOpen ? `${idx * 40}ms` : "0ms" }}
+              >
+                <Link
+                  href={link}
+                  className={`block py-2 px-2 text-sm text-[#4B4B4B] font-semibold rounded hover:bg-gray-50 transition-colors ${
+                    isActive ? "text-[#CC0101] underline" : ""
+                  }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t[item.key] || item.key}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <Link href="/register">
+          <button className="mt-4 w-full py-3 px-6 bg-[#D92D40] text-white rounded-full shadow transition-all duration-300">
             Register Now
           </button>
-          </Link>
-        </div>
-      )}
+        </Link>
+      </div>
     </div>
   );
 };

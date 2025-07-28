@@ -33,6 +33,9 @@ export const metadata: Metadata = {
       "UAA was built by founders, not just coders. After scaling multiple 8-figure brands, we realized: most businesses don’t fail from bad products — they fail from bad systems. That's why we built UAA.",
     images: [`${BASE_URL}/cover-image-01.png`],
   },
+  // icons: {
+  //   icon:"/favicon.svg",
+  // }
 };
 
 export default function RootLayout({
