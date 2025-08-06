@@ -23,10 +23,10 @@ const festivals = [
 
 const FilipinoFiestas = () => {
   return (
-    <section className="py-10 max-md:py-6 px-0 max-md:px-2">
+    <section className="py-10 max-md:py-6 px-0 max-md:px-2 md:-mt-90">
       <div className="">
-        <h2 className="text-2xl max-md:text-lg md:text-3xl font-bold text-[#222] mb-2">Filipino Fiestas</h2>
-        <p className="text-zinc-500 text-base max-md:text-sm md:text-lg mb-8 max-md:mb-4 max-w-2xl max-md:max-w-full">The Philippines has over 100 fiesta celebrations every year. Each fiesta is a celebration of every barangay's patron saints. Some major fiestas include the following</p>
+        <h2 className="text-2xl max-md:text-lg md:text-3xl font-bold text-white mb-2">Filipino Fiestas</h2>
+        <p className="text-zinc-400 text-base max-md:text-sm md:text-lg mb-8 max-md:mb-4 max-w-2xl max-md:max-w-full">The Philippines has over 100 fiesta celebrations every year. Each fiesta is a celebration of every barangay's patron saints. Some major fiestas include the following</p>
         <div className="grid max-md:grid-cols-1 md:grid-cols-3 gap-8 max-md:gap-4 md:gap-10">
           {festivals.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center text-center h-full w-full">

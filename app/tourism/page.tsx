@@ -10,8 +10,8 @@ const page = () => {
   return (
     <div>
       <Header />
+      <CulturalJourney />
       <div className="max-w-7xl mx-auto px-4">
-        <CulturalJourney />
         <FilipinoFiestas />
         <Hospitality />
         <Theylooks />

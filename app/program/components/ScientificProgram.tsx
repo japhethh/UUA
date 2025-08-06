@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Banner from "./Banner";
 
 const schedule = [
@@ -65,7 +66,7 @@ const schedule = [
   {
     day: "Day 3 – February 23, 2026 (Monday)",
     image: "/program/scientific-image-01.svg",
-        sessions: [
+    sessions: [
       {
         time: "08:30 AM – 10:00 AM",
         title: "Prostate Cancer Management",
@@ -95,53 +96,97 @@ const schedule = [
 ];
 
 const ScientificProgram = () => {
+  const [selectedDay, setSelectedDay] = useState(0);
   return (
     <section className="py-8 max-md:py-4 px-0 max-md:px-2">
-      <Banner />
-      <div>
-        {schedule.map((day, i) => (
-          <div key={i} className="mb-16 max-md:mb-8">
-            <div className="flex flex-col gap-2 mb-2">
-              <div className="flex justify-between items-center text-sm max-md:text-xs font-medium">
-                <span>{day.day}</span>
-                <span className="max-md:hidden">Manila Marriott Hotel</span>
-              </div>
-              <div className="border-b-2 border-[#0971B3] mt-2" />
-            </div>
-            <div className="rounded-3xl max-md:rounded-xl overflow-hidden mb-8 max-md:mb-4 mt-5 max-md:mt-2">
-              <img src={day.image} alt="Venue" className="w-full h-auto object-cover" />
-            </div>
-            <div className="bg-white ">
-              {day.sessions.map((session, idx) => (
+      <div className="text-center mb-8">
+        <h2 className="font-bold text-2xl md:text-3xl mb-2">
+          Official UAA 2026 Scientific Program
+        </h2>
+        <div className="text-zinc-500 text-base md:text-lg">
+          4 Days of Innovation, Collaboration, and Medical Excellence in Urology
+          <br />
+          Join global experts, innovators.
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12 max-w-[1200px] mx-auto">
+        {/* Left: Day Navigation */}
+        <div className="md:w-1/4 w-full flex md:block mb-4 md:mb-0 overflow-x-auto md:overflow-visible max-md:mb-6">
+          <div className="flex md:flex-col gap-2 w-full border-r border-zinc-200 max-md:border-r-0 max-md:border-b">
+            {schedule.map((day, i) => (
+              <button
+                key={i}
+                className={`text-left px-4 py-3 md:px-6 md:py-4 cursor-pointer border-b border-zinc-200 transition-all duration-150 min-w-[180px] md:min-w-0 rounded-xl 
+                  ${
+                    selectedDay === i
+                      ? "bg-[#0971B3] text-white font-semibold shadow-md"
+                      : "bg-white hover:bg-zinc-100 text-zinc-900"
+                  }`}
+                onClick={() => setSelectedDay(i)}
+              >
+                <div className="text-xs sm:text-sm md:text-base font-medium">
+                  {day.day}
+                </div>
                 <div
-                  key={idx}
-                  className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-0 border-b border-[#E5E5E5] last:border-b-0 px-4 max-md:px-2 py-6 max-md:py-4"
+                  className={`text-[10px] sm:text-xs md:text-sm ${
+                    selectedDay === i ? "text-blue-100" : "text-zinc-400"
+                  }`}
                 >
-                  <div className="flex items-center gap-2 w-full md:w-1/5">
-                    <img src="/program/time-icon.svg" alt="Time" className="w-10 max-md:w-3 h-auto" />
-                    <span className="text-xs max-md:text-[10px] md:text-sm text-zinc-600 font-medium whitespace-nowrap">
-                      {session.time}
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-base max-md:text-sm md:text-lg text-[#222] mb-1">
+                  Manila Marriott Hotel
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+        {/* Right: Main Content */}
+        <div className="flex-1 w-full">
+          <div className="rounded-2xl md:rounded-3xl overflow-hidden mb-6 md:mb-8">
+            <img
+              src={schedule[selectedDay].image}
+              alt="Venue"
+              className="w-full h-[180px] sm:h-[220px] md:h-[320px] object-cover object-center"
+            />
+          </div>
+          <div className="bg-white rounded-xl md:rounded-2xl p-0">
+            {schedule[selectedDay].sessions.map((session, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-0 border-b border-[#E5E5E5] last:border-b-0 px-2 sm:px-4 md:px-8 py-4 md:py-6"
+              >
+                <div className="flex items-center gap-2 w-full md:w-1/5 mb-2 md:mb-0">
+                  <img
+                    src="/program/time-icon.svg"
+                    alt="Time"
+                    className="w-5 sm:w-6 md:w-8 h-auto"
+                  />
+                  <span className="text-[10px] sm:text-xs md:text-sm text-zinc-600 font-medium whitespace-nowrap">
+                    {session.time}
+                  </span>
+                </div>
+                <div className="flex-1 flex items-center ml-15">
+                  <div className="flex flex-col text-left w-full">
+                    <div className="font-semibold text-xs sm:text-sm md:text-lg text-[#222] mb-1">
                       {session.title}
                     </div>
-                    <div className="text-zinc-500 text-xs max-md:text-[10px] md:text-sm">
+                    <div className="text-zinc-500 text-[10px] sm:text-xs md:text-sm">
                       {session.subtitle}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 w-full md:w-1/7 md:justify-start mt-2 md:mt-0">
-                    <img src="/program/location-icon.svg" alt="Location" className="w-10 max-md:w-3 h-auto" />
-                    <span className="text-xs max-md:text-[10px] md:text-sm text-zinc-600 font-medium whitespace-nowrap">
-                      {session.location}
-                    </span>
-                  </div>
                 </div>
-              ))}
-            </div>
+                <div className="flex items-center gap-2 w-full md:w-1/6 md:justify-start mt-2 md:mt-0">
+                  <img
+                    src="/program/location-icon.svg"
+                    alt="Location"
+                    className="w-5 sm:w-6 md:w-8 h-auto"
+                  />
+                  <span className="text-[10px] sm:text-xs md:text-sm text-zinc-600 font-medium whitespace-nowrap">
+                    {session.location}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

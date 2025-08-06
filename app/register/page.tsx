@@ -11,8 +11,8 @@ const page = () => {
     <div>
       <div>
         <Header />
-        <div className="max-w-7xl mx-auto px-4">
           <Hero />
+        <div className="max-w-7xl mx-auto px-4">
           <JoinTheMovement />
           <WhyJoin />
           <Package />

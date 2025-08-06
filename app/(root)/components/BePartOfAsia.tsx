@@ -2,7 +2,7 @@ import React from "react";
 
 const BePartOfAsia = () => {
   return (
-    <div className="mt-15 max-md:mt-8">
+    <div className="mt-15 max-md:mt-8 mb-5">
       <div className="w-full relative h-100 bg-[#FAFAFA] rounded-3xl p-10 max-md:p-4 flex max-md:flex-col max-md:gap-6 items-center">
         {/* Mobile: Image on top, Desktop: Image on right */}
         <div className="hidden max-md:flex w-full justify-center mb-4">
@@ -24,7 +24,7 @@ const BePartOfAsia = () => {
           </div>
         </div>
         <div className="flex md:ml-30 justify-center items-center max-md:hidden">
-          <img src="/root/home-patient.svg" alt="Image" className="w-60 h-auto" />
+          <img src="/root/home-patient.svg" alt="Image" className="w-100 h-auto" />
         </div>
       </div>
     </div>

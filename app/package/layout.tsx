@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rethink_Sans } from "next/font/google";
 import "../globals.css";
+// import { TanstackProvider } from "@/app/_providers/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,11 +18,18 @@ export const metadata: Metadata = {
   description: "Learn more about the Urological Association of Asia Congress.",
 };
 
-export default function PackageLayout({ children }: { children: React.ReactNode }) {
+export default function PackageLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${rethinkSans.variable} antialiased`}>
-        {children}
+      <body
+        className={`${geistSans.variable} ${rethinkSans.variable} antialiased`}
+      >
+          {children}
+
       </body>
     </html>
   );

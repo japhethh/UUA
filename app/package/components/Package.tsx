@@ -28,7 +28,6 @@ const Package = () => {
 useEffect(() => {
   async function fetchRate() {
     try {
-      // Use Frankfurter API (no API key required)
       const res = await fetch(
         "https://api.frankfurter.app/latest?amount=1&from=PHP&to=USD"
       );

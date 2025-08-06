@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rethink_Sans } from "next/font/google";
 import "../globals.css";
+// import { TanstackProvider } from "../_providers/provider";
 
 const rethinkSans = Rethink_Sans({
   variable: "--font-rethink-sans",
@@ -45,7 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={` ${rethinkSans.className}`}>
-      <body className={`antialiased font-sans`}>{children}</body>
+      <body className={`antialiased font-sans`}>
+        {/* <TanstackProvider></TanstackProvider> */}
+        {children}
+      </body>
     </html>
   );
 }
