@@ -92,7 +92,17 @@ const PersonalDialog: React.FC<PersonalDialogProps> = ({
   React.useEffect(() => {
     if (!open) {
       setStep(1);
-      setFields({ name: "", email: "", phone: "", birthday: "", location: "" });
+      setFields({
+        name: "",
+        email: "",
+        phone: "",
+        birthday: "",
+        location: "",
+        paymentMethod: "card",
+        paymentRef: "",
+        paymentImage: null,
+        paymentImageUrl: "",
+      });
       setErrors({});
     }
   }, [open]);
